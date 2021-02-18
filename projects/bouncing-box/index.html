@@ -6,14 +6,14 @@
 	<script src="jquery.min.js"></script>
 	<style>
         body {
-            background: url("backgroundimage.jpg") no-repeat center center fixed;;
+            background: url("trolled.png") no-repeat center center fixed;;
             background-color: #cccccc;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
         }
-        }
+        
 		.box {
 			width: 70px;
 			height: 70px;
@@ -63,7 +63,11 @@
 			// changes the text displayed on the Box
 			function changeBoxText(newText) {
 				box.text(newText);
-			}
+            }
+            //changes box color
+            function changeBoxColor(color) {
+                box.css('background-color', color)
+            }
 
 			//////////////////////////////////////////////////////////////////
 			/////////////////// YOUR CODE BELOW HERE /////////////////////////
@@ -76,6 +80,8 @@
             var speed = 10;
             var speedY = 10;
             var randPos = Math.random() * 100;
+            var colors = ["maroon", "red", "olive", "yellow", "orange", "green", "purple"]
+            var newColor = ""
 
 			
 			/* 
@@ -99,6 +105,7 @@
                 if (positionY < 0){
                     speedY = speedY * -1
                 }
+                changeBoxColor(newColor);
 
 			};
 
@@ -110,6 +117,7 @@
 			function handleBoxClick() {
                positionX = randPos;
                changeBoxText(points);
+               newColor = colors[Math.floor((Math.random()) * colors.length)];
                points = points + 1;
                 if (speed > 0) {
                     speed = speed + 3
@@ -123,10 +131,12 @@
                 } else if (speedY < 0) {
                     speedY = speedY - 3
                 }
+                
 
 
 			};
-		})();
+		}());
 	</script>
 </body>
 </html>
+        
