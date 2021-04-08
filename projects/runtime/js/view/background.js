@@ -74,7 +74,7 @@ var background = function (window) {
         
         // Perform background animation
         // called on each timer "tick" - 60 times per second
-        function update(60) {
+        function update() {
             // useful variables
             var canvasWidth = app.canvas.width;
             var canvasHeight = app.canvas.height;
