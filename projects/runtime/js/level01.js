@@ -39,21 +39,21 @@ var level01 = function (window) {
         sawBladeHitZone.addChild(obstacleImage);
         obstacleImage.x = -25;
         obstacleImage.y = -25;
-        };
-        createSawBlade(400, 125);
-        createSawBlade(600, 175);
-        createSawBlade(800, 200);
-        createSawBlade(1000, 225);
-        createSawBlade(1200, 200);
-        createSawBlade(1400, 175);
-        createSawBlade(1600, 200);
-        createSawBlade(1800, 125);
-        createSawBlade(2000, 125);
-        createSawBlade(2200, 125);
-        createSawBlade(2400, 125);
-        createSawBlade(2600, 125);
-        createSawBlade(2800, 125);
-        createSawBlade(3000, 125);
+        };  
+        createSawBlade(400, groundY + 125);
+        createSawBlade(600, groundY + 175);
+        createSawBlade(800, groundY + 200);
+        createSawBlade(1000, groundY + 225);
+        createSawBlade(1200, groundY + 200);
+        createSawBlade(1400, groundY + 175);
+        createSawBlade(1600, groundY + 200);
+        createSawBlade(1800, groundY + 125);
+        createSawBlade(2000, groundY + 125);
+        createSawBlade(2200, groundY + 125);
+        createSawBlade(2400, groundY + 125);
+        createSawBlade(2600, groundY + 125);
+        createSawBlade(2800, groundY + 125);
+        createSawBlade(3000, groundY + 125); 
         
         function createMyObstacle(obstacleHitZoneX,obstacleHitZoneY) {
         var hitZoneSize = 25;
