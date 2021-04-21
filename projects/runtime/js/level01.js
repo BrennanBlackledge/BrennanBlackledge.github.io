@@ -19,6 +19,7 @@ var level01 = function (window) {
                 { "type": "sawblade", "x": 400, "y": groundY },
                 { "type": "sawblade", "x": 600, "y": groundY },
                 { "type": "sawblade", "x": 900, "y": groundY },
+                
             ]
         };
         window.levelData = levelData;
@@ -40,10 +41,10 @@ var level01 = function (window) {
         obstacleImage.x = -25;
         obstacleImage.y = -25;
         };  
-        createSawBlade(400, groundY + 125);
-        createSawBlade(600, groundY + 175);
-        createSawBlade(800, groundY + 200);
-        createSawBlade(1000, groundY + 225);
+        createSawBlade(400, 125);
+        createSawBlade(600, 175);
+        createSawBlade(800, 200);
+        createSawBlade(1000, 225);
         createSawBlade(1200, groundY + 200);
         createSawBlade(1400, groundY + 175);
         createSawBlade(1600, groundY + 200);
@@ -70,6 +71,24 @@ var level01 = function (window) {
         createMyObstacle(100,100);
         createMyObstacle(300, 25);
         createMyObstacle(500, 75);
+
+        var enemy = game.createGameItem('enemy',25);
+        var redSquare = draw.rect(50,50,'red');
+        redSquare.x = -25;
+        redSquare.y = -25;
+        enemy.addChild(redSquare);
+        enemy.x = 400;
+        enemy.y = groundY-50;
+        enemy.velocityX = -1;
+        var rotationalVelocity = 10;
+        game.addGameItem(enemy);
+        enemy.onPlayerCollision = function() {
+            game.changeIntegrity(-30);
+        };  
+        enemy.onProjectileCollision = function() {
+            game.increaseScore(100);
+            enemy.fadeOut();
+        }
         // DO NOT EDIT CODE BELOW HERE
     }
 };
