@@ -57,8 +57,8 @@ var level01 = function (window) {
         createSawBlade(2600, groundY - 00);
         createSawBlade(2800, groundY - 25);
         createSawBlade(3000, groundY - 25); 
-        createSawBlade(3200, groundY - 45); 
-        createSawBlade(3400, groundY - 55); 
+        createSawBlade(3200, groundY - 15); 
+        createSawBlade(3400, groundY - 97); 
 
 
         function createMyObstacle(obstacleHitZoneX,obstacleHitZoneY) {
@@ -77,8 +77,8 @@ var level01 = function (window) {
         };
         createMyObstacle(275, groundY - 199);
         createMyObstacle(500, groundY + 5);
-        createMyObstacle(800, groundY - 190);
-        createMyObstacle(900, 125); 
+        createMyObstacle(800, groundY - 170);
+        createMyObstacle(900, groundY - 155); 
         createMyObstacle(2100, 165);
         createMyObstacle(3300, 130);
 
