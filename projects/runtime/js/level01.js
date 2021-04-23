@@ -45,17 +45,20 @@ var level01 = function (window) {
         createSawBlade(600, 175);
         createSawBlade(800, 200);
         createSawBlade(1000, 225);
-        createSawBlade(1200, groundY + 200);
-        createSawBlade(1400, groundY + 175);
-        createSawBlade(1600, groundY + 200);
-        createSawBlade(1800, groundY + 125);
-        createSawBlade(2000, groundY + 125);
-        createSawBlade(2200, groundY + 125);
-        createSawBlade(2400, groundY + 125);
-        createSawBlade(2600, groundY + 125);
-        createSawBlade(2800, groundY + 125);
-        createSawBlade(3000, groundY + 125); 
-        
+        createSawBlade(1200, groundY + 500);
+        createSawBlade(1400, groundY + 475);
+        createSawBlade(1600, groundY + 500);
+        createSawBlade(1800, groundY + 425);
+        createSawBlade(2000, groundY + 425);
+        createSawBlade(2200, groundY + 425);
+        createSawBlade(2400, groundY + 425);
+        createSawBlade(2600, groundY + 400);
+        createSawBlade(2800, groundY + 425);
+        createSawBlade(3000, groundY + 425); 
+        createSawBlade(3200, groundY + 475); 
+        createSawBlade(3400, groundY + 455); 
+
+
         function createMyObstacle(obstacleHitZoneX,obstacleHitZoneY) {
         var hitZoneSize = 25;
         var damageFromObstacle = 10;
@@ -71,6 +74,8 @@ var level01 = function (window) {
         createMyObstacle(100,100);
         createMyObstacle(300, 25);
         createMyObstacle(500, 75);
+        createMyObstacke(1000, groundY + 425); 
+
 
         var enemy = game.createGameItem('enemy',25);
         var redSquare = draw.rect(50,50,'red');
