@@ -19,7 +19,7 @@ var level01 = function (window) {
                 { "type": "sawblade", "x": 400, "y": groundY },
                 { "type": "sawblade", "x": 600, "y": groundY },
                 { "type": "sawblade", "x": 900, "y": groundY },
-                
+                { "type": "sawblade", "x": 500, "y": groundY },
             ]
         };
         window.levelData = levelData;
@@ -42,21 +42,21 @@ var level01 = function (window) {
         obstacleImage.y = -25;
         };  
         createSawBlade(400, 125);
-        createSawBlade(600, 175);
-        createSawBlade(800, 200);
+        createSawBlade(1000, 175);
+        createSawBlade(875, 200);
         createSawBlade(1000, 225);
-        createSawBlade(1200, groundY + 500);
-        createSawBlade(1400, groundY + 475);
-        createSawBlade(1600, groundY + 500);
-        createSawBlade(1800, groundY + 425);
-        createSawBlade(2000, groundY + 425);
-        createSawBlade(2200, groundY + 425);
-        createSawBlade(2400, groundY + 425);
-        createSawBlade(2600, groundY + 400);
-        createSawBlade(2800, groundY + 425);
-        createSawBlade(3000, groundY + 425); 
-        createSawBlade(3200, groundY + 475); 
-        createSawBlade(3400, groundY + 455); 
+        createSawBlade(1200, groundY - 100);
+        createSawBlade(1400, groundY - 75);
+        createSawBlade(1600, groundY - 100);
+        createSawBlade(1800, groundY - 25);
+        createSawBlade(2000, groundY - 25);
+        createSawBlade(2200, groundY - 25);
+        createSawBlade(2400, groundY - 25);
+        createSawBlade(2600, groundY - 00);
+        createSawBlade(2800, groundY - 25);
+        createSawBlade(3000, groundY - 25); 
+        createSawBlade(3200, groundY - 75); 
+        createSawBlade(3400, groundY - 55); 
 
 
         function createMyObstacle(obstacleHitZoneX,obstacleHitZoneY) {
@@ -66,15 +66,19 @@ var level01 = function (window) {
         obstacleHitZone.x = obstacleHitZoneX;
         obstacleHitZone.y = obstacleHitZoneY;
         game.addGameItem(obstacleHitZone);
-        var obstacleImage = draw.bitmap('img/obstacle.png');
-        obstacleHitZone.addChild(obstacleImage);
-        obstacleImage.x = -25;
-        obstacleImage.y = -25;
+        var obstacleGondola = draw.bitmap('img/obstacle.png');
+        obstacleHitZone.addChild(obstacleGondola);
+        obstacleGondola.x = -25;
+        obstacleGondola.y = -25;
+        obstacleGondola.scaleX = 0.25;
+        obstacleGondola.scaleY = 0.5;
         };
-        createMyObstacle(100,100);
-        createMyObstacle(300, 25);
-        createMyObstacle(500, 75);
-        createMyObstacke(1000, groundY + 425); 
+        createMyObstacle(175,100);
+        createMyObstacle(500, 25);
+        createMyObstacle(800, 75);
+        createMyObstacle(1000, 125); 
+        createMyObstacle(2000, 150);
+        createMyObstacle(3000, 130);
 
 
         var enemy = game.createGameItem('enemy',25);
